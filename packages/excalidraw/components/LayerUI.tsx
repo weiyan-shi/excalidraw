@@ -281,13 +281,13 @@ const LayerUI = ({
                               title={t("toolBar.penMode")}
                               penDetected={appState.penDetected}
                             />
-                            <LockButton
+                            {/* <LockButton
                               checked={appState.activeTool.locked}
                               onChange={onLockToggle}
                               title={t("toolBar.lock")}
-                            />
+                            /> */}
 
-                            <div className="App-toolbar__divider" />
+                            {/* <div className="App-toolbar__divider" /> */}
 
                             <HandButton
                               checked={isHandToolActive(appState)}

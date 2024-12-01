@@ -68,8 +68,8 @@ export const canChangeStrokeColor = (
 
   return (
     (hasStrokeColor(appState.activeTool.type) &&
-      appState.activeTool.type !== "image" &&
-      commonSelectedType !== "image" &&
+      // appState.activeTool.type !== "image" &&
+      // commonSelectedType !== "image" &&
       commonSelectedType !== "frame" &&
       commonSelectedType !== "magicframe") ||
     targetElements.some((element) => hasStrokeColor(element.type))
@@ -318,22 +318,23 @@ export const ShapesSwitcher = ({
               if (appState.activeTool.type !== value) {
                 trackEvent("toolbar", value, "ui");
               }
-              if (value === "image") {
-                app.setActiveTool({
-                  type: value,
-                  insertOnCanvasDirectly: pointerType !== "mouse",
-                });
-              } else {
-                app.setActiveTool({ type: value });
-              }
+              app.setActiveTool({ type: value });
+              // if (value === "image") {
+              //   app.setActiveTool({
+              //     type: value,
+              //     insertOnCanvasDirectly: pointerType !== "mouse",
+              //   });
+              // } else {
+              //   app.setActiveTool({ type: value });
+              // }
             }}
           />
         );
       })}
-      <div className="App-toolbar__divider" />
+      {/* <div className="App-toolbar__divider" /> */}
 
       <DropdownMenu open={isExtraToolsMenuOpen}>
-        <DropdownMenu.Trigger
+        {/* <DropdownMenu.Trigger
           className={clsx("App-toolbar__extra-tools-trigger", {
             "App-toolbar__extra-tools-trigger--selected":
               frameToolSelected ||
@@ -366,7 +367,7 @@ export const ShapesSwitcher = ({
               AI
             </div>
           )}
-        </DropdownMenu.Trigger>
+        </DropdownMenu.Trigger> */}
         <DropdownMenu.Content
           onClickOutside={() => setIsExtraToolsMenuOpen(false)}
           onSelect={() => setIsExtraToolsMenuOpen(false)}
@@ -409,7 +410,7 @@ export const ShapesSwitcher = ({
           >
             {t("toolBar.mermaidToExcalidraw")}
           </DropdownMenu.Item>
-          {app.props.aiEnabled !== false && app.plugins.diagramToCode && (
+          {/* {app.props.aiEnabled !== false && app.plugins.diagramToCode && (
             <>
               <DropdownMenu.Item
                 onSelect={() => app.onMagicframeToolSelect()}
@@ -420,7 +421,7 @@ export const ShapesSwitcher = ({
                 <DropdownMenu.Item.Badge>AI</DropdownMenu.Item.Badge>
               </DropdownMenu.Item>
             </>
-          )}
+          )} */}
         </DropdownMenu.Content>
       </DropdownMenu>
     </>

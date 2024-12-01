@@ -481,14 +481,15 @@ function CommandPaletteInner({
             keywords: ["toolbar"],
             viewMode: false,
             perform: ({ event }) => {
-              if (value === "image") {
-                app.setActiveTool({
-                  type: value,
-                  insertOnCanvasDirectly: event.type === EVENT.KEYDOWN,
-                });
-              } else {
-                app.setActiveTool({ type: value });
-              }
+              app.setActiveTool({ type: value });
+              // if (value === "image") {
+              //   app.setActiveTool({
+              //     type: value,
+              //     insertOnCanvasDirectly: event.type === EVENT.KEYDOWN,
+              //   });
+              // } else {
+              //   app.setActiveTool({ type: value });
+              // }
             },
           };
 

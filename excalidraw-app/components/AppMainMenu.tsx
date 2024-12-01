@@ -20,22 +20,22 @@ export const AppMainMenu: React.FC<{
 }> = React.memo((props) => {
   return (
     <MainMenu>
-      <MainMenu.DefaultItems.LoadScene />
-      <MainMenu.DefaultItems.SaveToActiveFile />
-      <MainMenu.DefaultItems.Export />
+      {/* <MainMenu.DefaultItems.LoadScene /> */}
+      {/* <MainMenu.DefaultItems.SaveToActiveFile /> */}
+      {/* <MainMenu.DefaultItems.Export /> */}
       <MainMenu.DefaultItems.SaveAsImage />
-      {props.isCollabEnabled && (
+      {/* {props.isCollabEnabled && (
         <MainMenu.DefaultItems.LiveCollaborationTrigger
           isCollaborating={props.isCollaborating}
           onSelect={() => props.onCollabDialogOpen()}
         />
-      )}
-      <MainMenu.DefaultItems.CommandPalette className="highlighted" />
+      )} */}
+      {/* <MainMenu.DefaultItems.CommandPalette className="highlighted" />
       <MainMenu.DefaultItems.SearchMenu />
-      <MainMenu.DefaultItems.Help />
+      <MainMenu.DefaultItems.Help /> */}
       <MainMenu.DefaultItems.ClearCanvas />
-      <MainMenu.Separator />
-      <MainMenu.ItemLink
+      {/* <MainMenu.Separator /> */}
+      {/* <MainMenu.ItemLink
         icon={ExcalLogo}
         href={`${
           import.meta.env.VITE_APP_PLUS_LP
@@ -43,8 +43,8 @@ export const AppMainMenu: React.FC<{
         className=""
       >
         Excalidraw+
-      </MainMenu.ItemLink>
-      <MainMenu.DefaultItems.Socials />
+      </MainMenu.ItemLink> */}
+      {/* <MainMenu.DefaultItems.Socials />
       <MainMenu.ItemLink
         icon={loginIcon}
         href={`${import.meta.env.VITE_APP_PLUS_APP}${
@@ -53,8 +53,8 @@ export const AppMainMenu: React.FC<{
         className="highlighted"
       >
         {isExcalidrawPlusSignedUser ? "Sign in" : "Sign up"}
-      </MainMenu.ItemLink>
-      {import.meta.env.DEV && (
+      </MainMenu.ItemLink> */}
+      {/* {import.meta.env.DEV && (
         <MainMenu.Item
           icon={eyeIcon}
           onClick={() => {
@@ -70,8 +70,8 @@ export const AppMainMenu: React.FC<{
         >
           Visual Debug
         </MainMenu.Item>
-      )}
-      <MainMenu.Separator />
+      )} */}
+      {/* <MainMenu.Separator />
       <MainMenu.DefaultItems.ToggleTheme
         allowSystemTheme
         theme={props.theme}
@@ -80,7 +80,7 @@ export const AppMainMenu: React.FC<{
       <MainMenu.ItemCustom>
         <LanguageList style={{ width: "100%" }} />
       </MainMenu.ItemCustom>
-      <MainMenu.DefaultItems.ChangeCanvasBackground />
+      <MainMenu.DefaultItems.ChangeCanvasBackground /> */}
     </MainMenu>
   );
 });
