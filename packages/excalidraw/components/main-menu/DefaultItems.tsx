@@ -122,6 +122,7 @@ export const SaveAsImage = () => {
     </DropdownMenuItem>
   );
 };
+// menu
 SaveAsImage.displayName = "SaveAsImage";
 
 export const CommandPalette = (opts?: { className?: string }) => {

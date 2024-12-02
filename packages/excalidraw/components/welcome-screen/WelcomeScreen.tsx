@@ -6,14 +6,14 @@ import "./WelcomeScreen.scss";
 const WelcomeScreen = (props: { children?: React.ReactNode }) => {
   return (
     <>
-      {props.children || (
+      {/* {props.children || (
         <>
           <Center />
           <MenuHint />
           <ToolbarHint />
           <HelpHint />
         </>
-      )}
+      )} */}
     </>
   );
 };
